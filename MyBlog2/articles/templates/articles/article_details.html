@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if article %}
+<div class="article-detail">
+<div class="article">
+<img src="{{article.thumb.url}}" alt="" width="100%" >
+<h1 style="align:center">{{article.title}}</h1>
+<p>{{article.body}}</p>
+<p>Published on: {{article.publish_date}}</p>
+{% else %}
+<h1>Article is not reachable at this moment</h1>
+ </div>
+</div>
+{% endif %}
+{% endblock %}
